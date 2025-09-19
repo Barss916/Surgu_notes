@@ -12,6 +12,7 @@ body {
 }
 
 .wrapper {
+    display: flex;
     width: 1000px;
     height: 932px;
     border: 2px solid #D8D9DA;
@@ -20,12 +21,16 @@ body {
 }
 
 .title__notes {
-    font-size: 40px;
+    font-size: 38px;
 }
 
 .button__notes {
     margin: 0;
     font-size: 25px;
+}
+
+.button__notes:hover {
+  cursor: pointer;
 }
 
 .title__notes {
@@ -40,6 +45,11 @@ body {
     flex-direction: column;
     align-items: center;
     gap: 53px;
+    overflow: hidden;
+    width: 370px;
+    height: 932px;
+    border-right: 1px solid #F0F0F0;
+    background-color: #FCFBFC;
 }
 
 .tags__list-item:hover {
@@ -47,6 +57,10 @@ body {
     cursor: pointer;
     background-color: #F4F4F4;
     border-radius: 10px;
+}
+
+.tags__list-item {
+    padding: 11px 84px 12px 38px;
 }
 
 .button__notes {
@@ -72,19 +86,97 @@ body {
 }
 
 .tags__list {
+    margin: 0;
     padding: 0;
-    margin-left: 68px;
     font-size: 25px;
     display: flex;
     flex-direction: column;
-    gap: 27px;
     list-style: none;
 }
 
-.left__part {
+.search {
+    display: flex;
+    margin-left: 29px;
+    margin-top: 36px;
+    align-items: center;
+    gap: 11px;
+}
+
+.search__input {
+    padding: 0;
+    margin: 0;
+    width: 512px;
+    height: 50px;
+    border-radius: 10px;
     overflow: hidden;
-    width: 370px;
-    height: 932px;
-    border-right: 1px solid #F0F0F0;
-    background-color: #FCFBFC;
+    border: 1px solid black;
+    font-size: 20px;
+    padding-left: 16px;
+}
+.search__button {
+    border-radius: 10px;
+    padding: 0;
+    margin: 0;
+  margin-right: 28px;
+    background-image: url("./images/Vector.svg");
+    background-position: center;
+    background-size: 26px 25px;
+    background-repeat: no-repeat;
+    background-color: #4499FF;
+    width: 50px;
+    height: 50px;
+    border: none;
+}
+
+.search__button:hover {
+  cursor: pointer;
+}
+
+.note {
+   display: flex;
+  margin: 0;
+   border: 1px solid #D8D9DA;
+  border-radius: 10px;
+  border-color: #E3E2E5;
+  flex-grow:1;
+}
+
+.tag {
+    display: inline;
+    background-color: #F5F7F7;
+    border-radius: 10px;
+  font-size: 15px;
+  padding: 5px 16px 5px 17px;
+}
+
+.note__left__part {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  gap: 25px;
+}
+
+.note__title {
+  font-weight: bold;
+  padding-top: 16px;
+  padding-left: 22px;
+  font-size: 30px;
+}
+
+.note__date {
+  padding-bottom: 14px;
+  padding-left: 22px;
+  font-size: 18px;
+}
+
+.note__tag {
+  margin-top: 20px;
+  margin-right: 18px;
+}
+
+.notes__list {
+  margin: 53px 28px 0 29px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
 }
