@@ -60,7 +60,7 @@ body {
 }
 
 .tags__list-item {
-    padding: 11px 84px 12px 38px;
+    padding: 11px 68px 12px 38px;
 }
 
 .button__notes {
@@ -157,6 +157,7 @@ body {
 }
 
 .note__title {
+  hyphens: auto;
   font-weight: bold;
   padding-top: 16px;
   padding-left: 22px;

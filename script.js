@@ -1,5 +1,5 @@
 let newNote = document.getElementsByTagName("button__notes");
-const notesList = document.getElementsByTagName("notes__list");
+const notesList = document.getElementById("list")
 
 
 document.addEventListener("click", function (e) {
@@ -8,10 +8,11 @@ document.addEventListener("click", function (e) {
         noteContainerL.classList.add("note__left__part");
 
 
+        const noteTitleInput = prompt("Заголовок заметки: ");
         let noteTitle = document.createElement("span");
-        let noteTitleText = document.createTextNode("Privet");
+        noteTitle.textContent = noteTitleInput;
         noteTitle.classList.add("note__title");
-        noteTitle.appendChild(noteTitleText);
+
 
         let noteDate = document.createElement("span");
         let noteDateText = document.createTextNode("12 Jan");
@@ -35,6 +36,7 @@ document.addEventListener("click", function (e) {
         noteGeneral.appendChild(noteContainerL);
         noteGeneral.appendChild(noteContainerR);
 
-        console.log(notesList);
+
+        notesList.insertAdjacentHTML("beforeend", noteGeneral.outerHTML);
     }
 });
