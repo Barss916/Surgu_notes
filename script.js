@@ -1,5 +1,6 @@
 let newNote = document.getElementsByTagName("button__notes");
-const notesList = document.getElementById("list")
+const input = document.getElementById("search__input");
+const notesList = document.getElementById("list");
 
 
 document.addEventListener("click", function (e) {
@@ -15,10 +16,8 @@ document.addEventListener("click", function (e) {
 
 
         let noteDate = document.createElement("span");
-        let noteDateText = document.createTextNode("12 Jan");
+        noteDate.textContent = new Date().toISOString().split('T')[0];
         noteDate.classList.add("note__date");
-        noteDate.appendChild(noteDateText);
-        
         let noteContainerR = document.createElement("div");
         noteContainerR.classList.add("note__tag");
 
@@ -38,5 +37,9 @@ document.addEventListener("click", function (e) {
 
 
         notesList.insertAdjacentHTML("beforeend", noteGeneral.outerHTML);
-    }
+    };
+
+    if (e.target.className == "search__button"){
+        console.log(input.value.toLowerCase());
+    };
 });
