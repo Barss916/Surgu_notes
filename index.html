@@ -11,7 +11,7 @@
     <div class="wrapper">
         <div class="left__part">
             <b><h1 class="title__notes">Мои Заметки</h1></b>
-            <button class="button__notes">Новая Заметка</button>
+            <button class="button__notes" id="new__note">Новая Заметка</button>
             <div class="tags">
                 <p class="tags__title">Теги</p>
                 <ul class="tags__list">
@@ -26,12 +26,21 @@
         <div class="right__part">
             <div class="search">
                 <input id="search__input" class="search__input" placeholder="Поиск">
-                <button class="search__button" type="submit"></button>
+                <button class="search__button" type="submit" id="search__button"></button>
             </div>
             <div class="notes__list" id="list">
                 
             </div>
         </div>
+    </div>
+    <div id="modal">
+        <div class="modal-content">
+            <h3>Новая заметка</h3>
+            <input type="text" id="titleInput" placeholder="Название"><br>
+            <input type="text" id="tagInput" placeholder="Тег"><br>
+            <button id="saveNoteBtn">Сохранить</button>
+            <button id="closeModalBtn">Отмена</button>
+        </div> 
     </div>
     <script src="./script.js"></script>
 </body>
