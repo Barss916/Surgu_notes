@@ -177,9 +177,11 @@ body {
 
 .notes__list {
   margin: 53px 28px 0 29px;
+  max-height: 750px;
   display: flex;
   flex-direction: column;
   gap: 30px;
+  overflow-y: auto;
 }
 
 
@@ -190,6 +192,18 @@ body {
   background: rgba(0,0,0,0.5);
   justify-content: center;
   align-items: center;
+}
+
+.modal-button {
+  background-color: #4499FF;
+  border: none;
+  padding:5px;
+  margin: 9px;
+  border-radius: 10px;
+}
+
+.modal-button:hover{
+  cursor: pointer;
 }
 
 .modal-content {
@@ -206,6 +220,22 @@ body {
   margin: 5px 0;
 }
 
+.modal-content select {
+  width: 284px;
+  padding: 5px;
+  margin: 5px 0;
+}
+
 .modal-content button {
   margin-top: 10px;
+}
+
+.modal-title {
+  font-size: 20px;
+  margin-top: 7px;
+}
+
+.modal-buttons {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 }

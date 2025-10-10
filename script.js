@@ -17,7 +17,8 @@ closeModalBtn.addEventListener('click', () => {
 
 saveNoteBtn.addEventListener("click", () => {
     const title = document.getElementById('titleInput').value.trim();
-    const tag = document.getElementById('tagInput').value.trim();
+    const tag = document.getElementById('tagInput');
+    const tag_text = tag.options[tag.selectedIndex].text;
     const date = new Date().toLocaleString(); // текущая дата и время
 
     if (title) {
@@ -28,7 +29,7 @@ saveNoteBtn.addEventListener("click", () => {
                                 <span class="note__date">${date}</span>
                             </div>
                             <div class="note__tag">
-                                <span class="tag">${tag || '—'}</span>
+                                <span class="tag">${tag_text || '—'}</span>
                             </div>`;
         notesList.appendChild(noteDiv);
 
