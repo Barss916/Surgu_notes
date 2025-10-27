@@ -1,3 +1,6 @@
+// Сдлеать трекинг заметок по  id
+
+let maxId = 1;
 const newNote = document.getElementById("new__note");
 const tags = document.getElementsByClassName("tags__list-item");
 const searchButton = document.getElementById("search__button");
@@ -6,6 +9,55 @@ const modal = document.getElementById('modal');
 const saveNoteBtn = document.getElementById('saveNoteBtn');
 const closeModalBtn = document.getElementById('closeModalBtn');
 const notesList = document.getElementById("list");
+
+let notes = [{
+    "id": 1,
+    "title": "fdas",
+    "tag": 12
+},
+{
+    "id": 2,
+    "title": "fdas",
+    "tag": 12
+},
+{
+    "id": 3,
+    "title": "fdas",
+    "tag": 12
+},
+{
+    "id": 4,
+    "title": "fdas",
+    "tag": 12
+}];
+
+function getMaxId() {
+    for (let note of notes) {
+        if (note.id > maxId) {
+            maxId = note.id;
+        }
+    }
+}
+
+getMaxId();
+
+async function initData() {
+   try
+    {const res = await fetch("http://localhost:5000", {method : "GET"});
+    if (!res.ok){
+        console.log("404");
+        return 0;
+    }
+
+    const data = await res.json();
+    console.log(data);
+    return data;
+    } catch (e){
+        console.log(e)
+    }
+}
+
+initData();
 
 newNote.addEventListener("click", () => {
     modal.style.display = 'flex';
