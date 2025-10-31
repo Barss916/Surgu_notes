@@ -134,6 +134,7 @@ body {
 
 .note {
    display: flex;
+   position: relative;
   margin: 0;
    border: 1px solid #D8D9DA;
   border-radius: 10px;
@@ -238,4 +239,34 @@ body {
 .modal-buttons {
   display: grid;
   grid-template-columns: 1fr 1fr;
+}
+
+.note__buttons {
+  display: flex;
+  flex-direction: row;
+  width: fit-content;
+  height: fit-content;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  padding: 0px 20px 17px 0px;
+  gap: 5px;
+}
+
+#delete__note{
+  background-color: rgb(241, 56, 56);
+  border-radius: 10px;
+}
+
+#update__note{
+  background-color: #4499FF;
+  border-radius: 10px;
+}
+
+.note__button:hover {
+  cursor: pointer;
+}
+
+.note__button {
+  border: 0;
 }
