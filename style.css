@@ -253,14 +253,14 @@ body {
   gap: 5px;
 }
 
-#delete__note{
+.delete__note {
   background-color: rgb(241, 56, 56);
-  border-radius: 10px;
+  border-radius: 5px;
 }
 
-#update__note{
+.update__note{
   background-color: #4499FF;
-  border-radius: 10px;
+  border-radius: 5px;
 }
 
 .note__button:hover {
@@ -269,4 +269,5 @@ body {
 
 .note__button {
   border: 0;
+  color: white;
 }
